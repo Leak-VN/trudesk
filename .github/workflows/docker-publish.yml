@@ -28,5 +28,5 @@ jobs:
       run: |
         docker buildx create --use
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-        docker buildx build --platform linux/amd64,linux/arm64 -t vouu . --push
+        docker buildx build --platform linux/amd64,linux/arm64 -t vouu/trudesk . --push
 
